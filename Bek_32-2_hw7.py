@@ -107,7 +107,7 @@ def print_the_table(conn):
 
 
 def price_up_to_100_soms(conn):
-    sql = '''SELECT product_title, price, quantity FROM Products WHERE price <= 100'''
+    sql = '''SELECT product_title, price, quantity FROM Products WHERE price <= 100 AND quantity > 5'''
     try:
         cursor = conn.cursor()
         cursor.execute(sql)
